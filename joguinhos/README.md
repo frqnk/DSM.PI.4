@@ -1,3 +1,3 @@
 # joguinhos
 
-A new Flutter project.
+Aplicação multiplataforma de pequenos jogos.
