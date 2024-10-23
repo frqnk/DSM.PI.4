@@ -1,0 +1,30 @@
+name: Fluxo de trabalho
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+env:
+  projeto-flutter: ./joguinhos
+  branch-do-site: site
+jobs:
+  publicar-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: |
+          flutter pub get
+          flutter --version
+          flutter config --enable-web
+          flutter build web --release
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git reset --soft $(git rev-list --max-parents=0 HEAD)
+          git --work-tree build/web add --all
+          git commit --amend --allow-empty-message --message=""
+          git push origin HEAD:${{ env.branch-do-site }} --force
+        working-directory: ${{ env.projeto-flutter }}
