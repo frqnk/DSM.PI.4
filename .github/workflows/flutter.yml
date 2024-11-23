@@ -40,7 +40,7 @@ jobs:
           git config user.name "${{ env.GIT-USER }}"
           git config user.email "${{ env.GIT-EMAIL }}"
       - name: construir para a web
-        run: flutter build web --release
+        run: flutter build web --release --wasm
       - name: publicar o site
         run: |
           git --work-tree build/web add --all
