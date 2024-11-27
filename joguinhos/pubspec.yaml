@@ -12,6 +12,9 @@ dependencies:
   flutter_animate: ^4.5.0
   flame: ^1.16.0
   google_fonts: ^6.1.0
+  flame_forge2d: ^0.18.2+3
+  url_launcher: ^6.3.1
+  collection: ^1.18.0
 
 dev_dependencies:
   flutter_test:
@@ -20,3 +23,17 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/animations/
+    - assets/images/
+    - assets/images/tile_maps/
+    - assets/images/layers/
+    - assets/images/parallax/
+    - assets/images/parallax/
+    - assets/images/rogue_shooter/
+    - assets/spine/
+    - assets/svgs/
+    - assets/tiles/
+    - assets/audio/music/
+    - assets/audio/sfx/
+    - assets/yarn/
