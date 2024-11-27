@@ -34,7 +34,9 @@ class GameMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Joguinhos'),
+        title: const Center(
+          child: Text('Joguinhos'),
+        ),
       ),
       body: Center(
         child: Column(

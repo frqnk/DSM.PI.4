@@ -9,7 +9,6 @@ class TRexWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'T-Rex',
       home: Container(
         color: Colors.black,
         margin: const EdgeInsets.all(45),

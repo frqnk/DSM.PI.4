@@ -53,7 +53,6 @@ class PadracingWidget extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'PadRacing',
       home: GameWidget<PadRacingGame>(
         game: PadRacingGame(),
         loadingBuilder: (context) => Center(
