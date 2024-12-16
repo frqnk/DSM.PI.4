@@ -6,90 +6,57 @@ import 'rogue_shooter/rogue_shooter_widget.dart';
 import 'trex/trex_widget.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Joguinhos());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Joguinhos extends StatelessWidget {
+  const Joguinhos({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Joguinhos',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
-          brightness: View.of(context).platformDispatcher.platformBrightness,
-        ),
-      ),
-      home: const GameMenu(),
+      home: Home(),
     );
   }
 }
 
-class GameMenu extends StatelessWidget {
-  const GameMenu({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text('Joguinhos'),
+        title: const Text('Joguinhos'),
+        actions: [
+            IconButton(
+              icon: const Icon(Icons.person),
+              tooltip: 'Perfil',
+              onPressed: () {},
+            ),
+          ],
         ),
-      ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Wrap(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(10),
+            ...[
+              {'title': 'Brick Breaker', 'widget': const brick_breaker.GameApp()},
+              {'title': 'Pad Racing', 'widget': const PadracingWidget()},
+              {'title': 'Rogue Shooter', 'widget': const RogueShooterWidget()},
+              {'title': 'T-Rex Game', 'widget': const TRexWidget()},
+            ].map((game) => Padding(
+              padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
+                child: Text(game['title'] as String),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const brick_breaker.GameApp()),
+                    MaterialPageRoute(builder: (context) => game['widget'] as Widget),
                   );
                 },
-                child: const Text('Brick Breaker'),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const PadracingWidget()),
-                  );
-                },
-                child: const Text('Pad Racing'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const RogueShooterWidget()),
-                  );
-                },
-                child: const Text('Rogue Shooter'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const TRexWidget()),
-                  );
-                },
-                child: const Text('T-Rex Game'),
-              ),
-            ),
+            )),
           ],
         ),
       ),
