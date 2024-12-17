@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
 import 'src/settings/settings_controller.dart';
 import 'src/settings/settings_service.dart';
@@ -15,6 +16,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+//  Stripe.publishableKey = "pk_live_51QX7OwCYHjKK6CowmDjXuSglTPG0UdtG7dnOvomOJn3EWRpql7O2Hy0qeCqA1b9wNN4oQeQyV7t0UDIo1kCt0eHj009awbcDAw";
 
   final settingsController = SettingsController(SettingsService());
   await settingsController.loadSettings();

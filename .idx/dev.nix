@@ -19,22 +19,40 @@
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       # "vscodevim.vim"
+      "Dart-Code.dart-code"
+      "Dart-Code.flutter"
     ];
 
     # Enable previews
     previews = {
       enable = true;
       previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
+        web = {
+          manager = "flutter";
+          cwd = "joguinhos";
+          command = [
+            "flutter"
+            "run"
+            "--machine"
+            "-d"
+            "web-server"
+            "--web-hostname"
+            "0.0.0.0"
+            "--web-port"
+            "$PORT"
+          ];
+        };
+        #android = {
+        #  manager = "flutter";
+        #  cwd = "joguinhos";
+        #  command = [
+        #    "flutter"
+        #    "run"
+        #    "--machine"
+        #    "-d"
+        #    "emulator-5554"
+        #  ];
+        #};
       };
     };
 

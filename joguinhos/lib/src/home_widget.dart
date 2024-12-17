@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
     {'title': 'Quebra-laje', 'widget': BrickBreakerWidget()},
     {'title': 'Jogo de corrida', 'widget': PadracingWidget()},
     {'title': 'Atirador estilo rogue', 'widget': RogueShooterWidget()},
-    {'title': 'Jogo do tiranossauro rex', 'widget': TRexWidget()},
+    {'title': 'Jogo do tiranossauro', 'widget': TRexWidget()},
   ];
 
   @override
@@ -25,10 +25,10 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Joguinhos'),
       ),
-      body: Row(
-        children: [
-          SafeArea(
-            child: NavigationRail(
+      body: SafeArea(
+        child: Row(
+          children: [
+            NavigationRail(
               extended: true,
               destinations: [
                 NavigationRailDestination(
@@ -55,26 +55,29 @@ class Home extends StatelessWidget {
                 }
               },
             ),
-          ),
-          Wrap(
-            alignment: WrapAlignment.center,
-            children: List.generate(
-              games.length,
-              (index) => ElevatedButton(
-                child: Text(games[index]['title'] as String),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          games[index]['widget'] as Widget,
+            Expanded(
+              child: Wrap(
+                children: games.map(
+                  (game) => Container(
+                    padding: EdgeInsets.all(8),
+                    child: ElevatedButton(
+                      child: Text(game['title'] as String),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                game['widget'] as Widget,
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
+                  )
+                ).toList(),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
