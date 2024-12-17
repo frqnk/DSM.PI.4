@@ -4,10 +4,10 @@ import 'package:flame/effects.dart';
 import 'package:flame/events.dart';
 import 'package:flutter/material.dart';
 
-import '../brick_breaker.dart';
+import '../brick_breaker_game.dart';
 
 class Bat extends PositionComponent
-    with DragCallbacks, HasGameReference<BrickBreaker> {
+    with DragCallbacks, HasGameReference<BrickBreakerGame> {
   Bat({
     required this.cornerRadius,
     required super.position,

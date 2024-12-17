@@ -26,7 +26,7 @@ class TRexGame extends FlameGame
   late final Image spriteImage;
 
   @override
-  Color backgroundColor() => const Color(0xFFFFFFFF);
+  Color backgroundColor() => const Color(0xFFF7f7f7);
 
   late final player = Player();
   late final horizon = Horizon();
@@ -36,6 +36,7 @@ class TRexGame extends FlameGame
   int _score = 0;
   int _highScore = 0;
   int get score => _score;
+
   set score(int newScore) {
     _score = newScore;
     scoreText.text = '${scoreString(_score)}  HI ${scoreString(_highScore)}';

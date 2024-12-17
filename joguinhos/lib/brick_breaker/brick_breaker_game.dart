@@ -12,9 +12,9 @@ import 'config.dart';
 
 enum PlayState { welcome, playing, gameOver, won }
 
-class BrickBreaker extends FlameGame
+class BrickBreakerGame extends FlameGame
     with HasCollisionDetection, KeyboardEvents, TapDetector {
-  BrickBreaker()
+  BrickBreakerGame()
       : super(
           camera: CameraComponent.withFixedResolution(
             width: gameWidth,

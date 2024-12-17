@@ -1,8 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart' hide Image, Gradient;
-import 'package:url_launcher/url_launcher.dart';
 
-import 'game_colors.dart';
 import 'menu_card.dart';
 import 'padracing_game.dart';
 
@@ -24,33 +22,33 @@ class Menu extends StatelessWidget {
                 MenuCard(
                   children: [
                     Text(
-                      'PadRacing',
+                      'Jogo de corrida',
                       style: textTheme.displayLarge,
                     ),
                     Text(
-                      'First to 3 laps win',
+                      'O primeiro a dar 3 voltas vence!',
                       style: textTheme.bodyLarge,
                     ),
                     const SizedBox(height: 10),
                     ElevatedButton(
-                      child: const Text('1 Player'),
+                      child: const Text('Um jogador'),
                       onPressed: () {
                         game.prepareStart(numberOfPlayers: 1);
                       },
                     ),
                     Text(
-                      'Arrow keys',
+                      'Teclas de seta',
                       style: textTheme.bodyMedium,
                     ),
                     const SizedBox(height: 10),
                     ElevatedButton(
-                      child: const Text('2 Players'),
+                      child: const Text('Dois jogadores'),
                       onPressed: () {
                         game.prepareStart(numberOfPlayers: 2);
                       },
                     ),
                     Text(
-                      'WASD',
+                      'Teclas WASD e teclas de seta',
                       style: textTheme.bodyMedium,
                     ),
                   ],

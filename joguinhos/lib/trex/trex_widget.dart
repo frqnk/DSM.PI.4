@@ -8,17 +8,13 @@ class TRexWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        color: Colors.black,
-        margin: const EdgeInsets.all(45),
-        child: ClipRect(
-          child: GameWidget(
-            game: TRexGame(),
-            loadingBuilder: (_) => const Center(
-              child: Text('Loading'),
-            ),
-          ),
+    return Container(
+      decoration: const BoxDecoration(
+        color: Color(0xFFf7f7f7),
+      ),
+      child: SafeArea(
+        child: GameWidget(
+          game: TRexGame(),
         ),
       ),
     );

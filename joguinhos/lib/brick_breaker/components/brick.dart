@@ -2,13 +2,13 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
-import '../brick_breaker.dart';
+import '../brick_breaker_game.dart';
 import '../config.dart';
 import 'ball.dart';
 import 'bat.dart';
 
 class Brick extends RectangleComponent
-    with CollisionCallbacks, HasGameReference<BrickBreaker> {
+    with CollisionCallbacks, HasGameReference<BrickBreakerGame> {
   Brick({required super.position, required Color color})
       : super(
           size: Vector2(brickWidth, brickHeight),

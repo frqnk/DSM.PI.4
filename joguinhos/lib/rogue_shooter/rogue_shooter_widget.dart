@@ -8,10 +8,9 @@ class RogueShooterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GameWidget(
-      game: RogueShooterGame(),
-      loadingBuilder: (_) => const Center(
-        child: Text('Loading'),
+    return SafeArea(
+      child: GameWidget(
+        game: RogueShooterGame(),
       ),
     );
   }

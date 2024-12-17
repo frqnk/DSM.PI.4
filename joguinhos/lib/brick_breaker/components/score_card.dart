@@ -14,9 +14,9 @@ class ScoreCard extends StatelessWidget {
       valueListenable: score,
       builder: (context, score, child) {
         return Padding(
-          padding: const EdgeInsets.fromLTRB(12, 6, 12, 18),
+          padding: const EdgeInsets.all(8),
           child: Text(
-            'Score: $score'.toUpperCase(),
+            'Pontuação: $score'.toUpperCase(),
             style: Theme.of(context).textTheme.titleLarge!,
           ),
         );
