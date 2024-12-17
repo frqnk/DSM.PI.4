@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "431825791054",
+    "project_id": "joguinhos-site",
+    "storage_bucket": "joguinhos-site.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431825791054:android:afdd93b4911465f12dfb1f",
+        "android_client_info": {
+          "package_name": "site.joguinhos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_J6rVBRcQT6g0CtePJEvX-Do3LEfIfws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

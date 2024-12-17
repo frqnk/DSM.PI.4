@@ -25,6 +25,7 @@ class _BrickBreakerWidgetState extends State<BrickBreakerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(8),
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,

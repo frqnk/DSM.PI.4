@@ -9,6 +9,7 @@ class TRexWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(8),
       decoration: const BoxDecoration(
         color: Color(0xFFf7f7f7),
       ),

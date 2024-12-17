@@ -9,31 +9,31 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_animate: ^4.5.0
-  flame: ^1.16.0
-  google_fonts: ^6.1.0
+  flutter_animate: ^4.5.2
+  flutter_gen: ^5.8.0
+  flutter_localizations:
+    sdk: flutter
+  flame: ^1.22.0
+  google_fonts: ^6.2.1
   flame_forge2d: ^0.18.2+3
   url_launcher: ^6.3.1
-  collection: ^1.18.0
+  collection: ^1.19.0
+  firebase_ui_auth: ^1.16.0
+  firebase_ui_oauth_google: ^1.4.0
+  google_sign_in: ^6.2.2
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
+  # Enable generation of localized Strings from arb files.
+  generate: true
   assets:
-    - assets/images/animations/
     - assets/images/
-    - assets/images/tile_maps/
-    - assets/images/layers/
-    - assets/images/parallax/
-    - assets/images/parallax/
     - assets/images/rogue_shooter/
-    - assets/spine/
-    - assets/svgs/
-    - assets/tiles/
     - assets/audio/music/
     - assets/audio/sfx/
-    - assets/yarn/

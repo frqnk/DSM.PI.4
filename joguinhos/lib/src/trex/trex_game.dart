@@ -17,12 +17,6 @@ enum GameState { playing, intro, gameOver }
 
 class TRexGame extends FlameGame
     with KeyboardEvents, TapCallbacks, HasCollisionDetection {
-  static const String description = '''
-    A game similar to the game in chrome that you get to play while offline.
-    Press space or tap/click the screen to jump, the more obstacles you manage
-    to survive, the more points you get.
-  ''';
-
   late final Image spriteImage;
 
   @override
