@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'src/settings/settings_controller.dart';
 import 'src/settings/settings_service.dart';
 import 'src/settings/settings_view.dart';
-import 'src/brick_breaker/brick_breaker_widget.dart';
-import 'src/padracing/padracing_widget.dart';
-import 'src/rogue_shooter/rogue_shooter_widget.dart';
-import 'src/trex/trex_widget.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 

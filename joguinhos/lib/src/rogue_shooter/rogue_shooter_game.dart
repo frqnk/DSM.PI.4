@@ -67,12 +67,12 @@ class RogueShooterGame extends FlameGame
   }
 
   @override
-  void onPanStart(_) {
+  void onPanStart(info) {
     _player.beginFire();
   }
 
   @override
-  void onPanEnd(_) {
+  void onPanEnd(info) {
     _player.stopFire();
   }
 

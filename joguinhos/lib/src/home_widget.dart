@@ -5,7 +5,6 @@ import 'brick_breaker/brick_breaker_widget.dart';
 import 'padracing/padracing_widget.dart';
 import 'rogue_shooter/rogue_shooter_widget.dart';
 import 'trex/trex_widget.dart';
-import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
 class Home extends StatelessWidget {
