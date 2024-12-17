@@ -50,7 +50,7 @@ class Joguinhos extends StatelessWidget {
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
-                    return SettingsView(controller);
+                    return SettingsView(controller: settingsController);
                   case LoginScreen.routeName:
                     return LoginScreen();
                   default:
