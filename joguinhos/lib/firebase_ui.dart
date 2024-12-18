@@ -3,23 +3,8 @@ import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart';
 import 'package:flutter/material.dart';
 
-const clientId = '431825791054-u5llbc65g8vfa56l6o5palj6vn6ug349.apps.googleusercontent.com';
-
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
-
-  static const routeName = '/perfil';
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tela de login'),
-      ),
-      body: const AuthGate(),
-    );
-  }
-}
+const clientId =
+    '431825791054-u5llbc65g8vfa56l6o5palj6vn6ug349.apps.googleusercontent.com';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});

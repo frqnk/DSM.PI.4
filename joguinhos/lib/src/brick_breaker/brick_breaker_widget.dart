@@ -52,7 +52,8 @@ class _BrickBreakerWidgetState extends State<BrickBreakerWidget> {
                         PlayState.welcome.name: (context, game) =>
                             const OverlayScreen(
                               title: 'Toque para começar',
-                              subtitle: 'Use as teclas de seta ou deslize para mover',
+                              subtitle:
+                                  'Use as teclas de seta ou deslize para mover',
                             ),
                         PlayState.gameOver.name: (context, game) =>
                             const OverlayScreen(
